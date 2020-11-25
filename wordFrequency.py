@@ -22,5 +22,5 @@ if __name__ == '__main__':
 			tweet = json.loads(line)
 			tokens = process_text(text=tweet['text'], tokenizer=tweet_tokenizer, stopwords=stopword_list)
 			words.update(tokens)
-		for tag, count in words.most_common(20):
+		for tag, count in words.most_common(60):
 			print("{}: {}".format(tag, count))
